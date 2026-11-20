@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>µLearn CHN · College of Engineering Chengannur</title>
+  <meta name="description" content="µLearn CHN is the GTech µLearn peer-learning community at College of Engineering Chengannur: interest groups, learning circles, events and karma." />
+  <meta name="theme-color" content="#07060d" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f4fb" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://res.cloudinary.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Shared SVG icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 19v-1a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v1M9.5 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM21 19v-1a4 4 0 0 0-3-3.9M15.5 3.1a3.5 3.5 0 0 1 0 6.8"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v6a4 4 0 0 1-8 0V4ZM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 14v4M8 21h8"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></symbol>
+      <symbol id="i-discord" viewBox="0 0 24 24"><path d="M8 17c-2.5-.3-4-1.4-4-1.4 0-5 1.6-8.6 2-9.3C7.4 5.6 9 5.2 9 5.2l.5 1.2c1.6-.3 3.4-.3 5 0l.5-1.2s1.6.4 3 1.1c.4.7 2 4.3 2 9.3 0 0-1.5 1.1-4 1.4l-.8-1.4"/><circle cx="9.5" cy="12" r="1.2"/><circle cx="14.5" cy="12" r="1.2"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="nav__bar">
+      <a class="brand" href="#top" aria-label="µLearn CHN home">
+        <span class="brand__chip">µ</span><span class="brand__word">Learn</span><span class="brand__tag">CHN</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#offers">Offers</a>
+        <a href="#events">Events</a>
+        <a href="#memories">Memories</a>
+        <a href="#team">Team</a>
+        <a href="#explore">Explore</a>
+      </nav>
+      <div class="nav__end">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="ico ico--sun"><use href="#i-sun"/></svg>
+          <svg class="ico ico--moon"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta" href="https://app.mulearn.org/register" target="_blank" rel="noopener">Join µLearn</a>
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top">
+      <canvas class="hero__terrain" id="terrain" aria-hidden="true"></canvas>
+      <div class="hero__beam" aria-hidden="true"></div>
+
+      <div class="orb-field" aria-hidden="true"><i class="blob blob--1"></i><i class="blob blob--2"></i><i class="blob blob--3"></i></div>
+
+      <div class="hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title"><span class="line"><span>Learn together.</span></span><span class="line"><span>Grow in the</span></span><span class="line"><span class="hero__mu">µverse.</span></span></h1>
+          <p class="hero__lead">µLearn CHN is the peer-learning community of College of Engineering Chengannur. Interest groups, learning circles and hands-on events, run by students for students.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="https://app.mulearn.org/register" target="_blank" rel="noopener">Join µLearn<svg class="ico"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--glass btn--lg" href="#events">Explore events</a>
+          </div>
+          <a class="proof" href="#team">
+            <span class="proof__faces" id="proof-faces"></span>
+            <span class="proof__text"><b>1,090+ learners</b> and counting</span>
+          </a>
+        </div>
+
+        <!-- Floating card stack -->
+        <div class="stack" id="stack" aria-label="µLearn CHN at a glance">
+          <article class="glass hc hc--event" data-depth="1.2">
+            <div class="hc__poster"><img id="hc-poster" alt="" /></div>
+            <div class="hc__body">
+              <span class="hc__label"><i class="live"></i>Latest flagship</span>
+              <b class="hc__title">Build with AI</b>
+              <span class="hc__meta">16-hour hackathon · Apr 6 – 7</span>
+            </div>
+          </article>
+
+          <article class="glass hc hc--karma" data-depth="2">
+            <div class="hc__row"><span class="hc__label">Karma mined</span><svg class="ico"><use href="#i-spark"/></svg></div>
+            <b class="hc__big" data-count="643350" data-suffix="+">6,43,350+</b>
+            <svg class="spark" viewBox="0 0 120 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 32 L15 28 L30 30 L45 22 L60 24 L75 15 L90 17 L105 8 L120 4" /><path class="spark__fill" d="M0 32 L15 28 L30 30 L45 22 L60 24 L75 15 L90 17 L105 8 L120 4 L120 36 L0 36Z" /></svg>
+          </article>
+
+          <article class="glass hc hc--rank" data-depth="2.6">
+            <div class="ring-meter" aria-hidden="true"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" /><circle class="ring-meter__val" cx="22" cy="22" r="18" /></svg><svg class="ico"><use href="#i-trophy"/></svg></div>
+            <div><b class="hc__big hc__big--sm">#7</b><span class="hc__label">Campus rank</span></div>
+          </article>
+
+          <article class="glass hc hc--team" data-depth="1.6">
+            <span class="hc__label">The team</span>
+            <div class="hc__faces" id="hc-faces"></div>
+            <span class="hc__meta">21 students &amp; faculty</span>
+          </article>
+
+          <article class="glass hc hc--igs" data-depth="3">
+            <span class="hc__label">Interest groups</span>
+            <div class="hc__chips"><span>AI</span><span>UI/UX</span><span>Web</span><span>Cyber</span><span>Biz</span></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Interest groups and programmes">
+        <div class="marquee__track" id="marquee"></div>
+      </div>
+    </section>
+
+    <!-- ============ Stats ============ -->
+    <section class="stats-band" aria-label="µLearn CHN in numbers">
+      <div class="wrap">
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <figure class="about__photo">
+          <img id="community-photo" alt="The µLearn CHN community gathered in front of College of Engineering Chengannur" loading="lazy" />
+          <figcaption>
+            <span class="about__badge"><span class="brand__chip brand__chip--sm">µ</span>CEC campus chapter</span>
+          </figcaption>
+        </figure>
+        <div class="about__text">
+          <p class="pill"><svg class="ico"><use href="#i-spark"/></svg>Introduction</p>
+          <h2 class="head__title">What is µLearn&nbsp;CHN?</h2>
+          <p class="about__lead">A dynamic community powered by GTech, dedicated to fostering growth through mutual learning. We bring together curious minds to explore new ideas, develop skills, and collaborate on innovative projects.</p>
+          <ul class="features">
+            <li class="feature">
+              <span class="icon-box"><svg class="ico"><use href="#i-users"/></svg></span>
+              <div><b>Peer learning</b><span>Classmates become collaborators.</span></div>
+            </li>
+            <li class="feature">
+              <span class="icon-box"><svg class="ico"><use href="#i-compass"/></svg></span>
+              <div><b>Mentorship</b><span>Guidance from people a few steps ahead.</span></div>
+            </li>
+            <li class="feature">
+              <span class="icon-box"><svg class="ico"><use href="#i-code"/></svg></span>
+              <div><b>Hands-on projects</b><span>Grow personally and professionally.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Offers ============ -->
+    <section class="section has-orbs" id="offers">
+      <div class="orb-field orb-field--soft" aria-hidden="true"><i class="blob blob--2"></i><i class="blob blob--3"></i></div>
+      <div class="wrap">
+        <header class="head">
+          <p class="pill"><svg class="ico"><use href="#i-layers"/></svg>How it works</p>
+          <h2 class="head__title">What µLearn offers</h2>
+          <p class="head__lead">Everything you need to go from curious to capable, and a way to see your progress add up.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step" data-tilt="5">
+            <div class="step__text">
+              <h3>Create your profile</h3>
+              <p>Sign up on the µLearn platform and link yourself to the CEC campus chapter.</p>
+            </div>
+            <div class="step__art art-profile" aria-hidden="true">
+              <div class="ring ring--2"></div>
+              <div class="ring ring--1"></div>
+              <div class="orb"><span>µ</span></div>
+            </div>
+          </li>
+          <li class="step" data-tilt="5">
+            <div class="step__text">
+              <h3>Pick an interest group</h3>
+              <p>Year-long tracks led by students, with structured paths and portfolio projects.</p>
+            </div>
+            <ul class="step__art art-list" id="ig-list" aria-label="Interest groups"></ul>
+          </li>
+          <li class="step" data-tilt="5">
+            <div class="step__text">
+              <h3>Learn in circles</h3>
+              <p>Small groups of learners from any branch who meet around a topic they share.</p>
+            </div>
+            <div class="step__art art-circle">
+              <div class="circle-orbit" aria-hidden="true">
+                <span style="--a:0deg">AI</span><span style="--a:72deg">UX</span><span style="--a:144deg">Web</span><span style="--a:216deg">Sec</span><span style="--a:288deg">Biz</span>
+              </div>
+              <a class="art-circle__cta" href="https://app.mulearn.org/learning-circle" target="_blank" rel="noopener">Create or join a circle<svg class="ico"><use href="#i-arrow"/></svg></a>
+            </div>
+          </li>
+          <li class="step step--karma" data-tilt="5">
+            <div class="step__text">
+              <h3>Earn karma</h3>
+              <p>Every session, task and contribution earns Karma Points and moves the campus up the ranks.</p>
+            </div>
+            <div class="step__art art-karma" aria-hidden="true">
+              <div class="karma-card">
+                <span class="karma-card__label">Karma mined</span>
+                <b class="karma-card__value">6,43,350+</b>
+                <div class="bars"><i style="--h:30%"></i><i style="--h:45%"></i><i style="--h:38%"></i><i style="--h:60%"></i><i style="--h:52%"></i><i style="--h:74%"></i><i style="--h:68%"></i><i style="--h:92%"></i></div>
+                <span class="karma-card__rank">Campus rank #7</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Events ============ -->
+    <section class="section" id="events">
+      <div class="wrap">
+        <header class="head head--split">
+          <div>
+            <p class="pill"><svg class="ico"><use href="#i-calendar"/></svg>Events &amp; initiatives</p>
+            <h2 class="head__title">Our event journey</h2>
+            <p class="head__lead">Hackathons, bootcamps, month-long sprints and all-Kerala tech fests, run by students for students.</p>
+          </div>
+          <div class="carousel-nav">
+            <button class="round-btn" id="journey-prev" aria-label="Previous events"><svg class="ico"><use href="#i-left"/></svg></button>
+            <button class="round-btn" id="journey-next" aria-label="Next events"><svg class="ico"><use href="#i-right"/></svg></button>
+          </div>
+        </header>
+      </div>
+
+      <div class="carousel" id="journey" tabindex="0" aria-label="Featured events"></div>
+
+      <div class="wrap">
+        <div class="board">
+          <div class="board__head">
+            <div class="board__title">
+              <span class="icon-box icon-box--sm"><svg class="ico"><use href="#i-calendar"/></svg></span>
+              <div>
+                <h3>Event archive</h3>
+                <p id="archive-count">Every event, year by year</p>
+              </div>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Academic year" id="archive-tabs"></div>
+          </div>
+          <div class="board__cols" aria-hidden="true">
+            <span>Date</span><span>Event</span><span>Format</span><span>About</span>
+          </div>
+          <div class="board__body" id="archive-panel" role="tabpanel" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Memories ============ -->
+    <section class="section" id="memories">
+      <div class="wrap">
+        <header class="head">
+          <p class="pill"><svg class="ico"><use href="#i-image"/></svg>Memories</p>
+          <h2 class="head__title">Moments from the µverse</h2>
+          <p class="head__lead">Labs full of learners, sessions that ran late, and the people who made them happen.</p>
+        </header>
+        <div class="gallery" id="gallery"></div>
+        <p class="gallery__more"><a class="btn btn--glass" href="https://www.instagram.com/mulearn.chn" target="_blank" rel="noopener">More on Instagram<svg class="ico"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ============ Team ============ -->
+    <section class="section has-orbs" id="team">
+      <div class="orb-field orb-field--soft" aria-hidden="true"><i class="blob blob--1"></i><i class="blob blob--3"></i></div>
+      <div class="wrap">
+        <header class="head">
+          <p class="pill"><svg class="ico"><use href="#i-users"/></svg>Team &amp; roles</p>
+          <h2 class="head__title">The people behind it</h2>
+          <p class="head__lead">Students and faculty who run µLearn CHN this year.</p>
+        </header>
+        <div class="spotlight" id="team-spotlight"></div>
+        <div class="filter" role="group" aria-label="Filter team" id="team-filter"></div>
+        <ul class="people" id="team-grid"></ul>
+      </div>
+    </section>
+
+    <!-- ============ Explore ============ -->
+    <section class="section explore" id="explore">
+      <div class="orb-field orb-field--soft" aria-hidden="true"><i class="blob blob--1"></i><i class="blob blob--2"></i></div>
+      <div class="wrap">
+        <header class="head">
+          <p class="pill"><svg class="ico"><use href="#i-compass"/></svg>Explore</p>
+          <h2 class="head__title">More from the µverse</h2>
+          <p class="head__lead">The brand book, photo galleries and channels where µLearn shares what's happening.</p>
+        </header>
+
+        <div class="bento">
+          <!-- Brand book -->
+          <a class="glass tile tile--brand" href="https://online.fliphtml5.com/egsqr/tlgc/" target="_blank" rel="noopener" data-tilt>
+            <div class="tile__preview brandbook" aria-hidden="true">
+              <div class="book">
+                <div class="book__page book__page--3"></div>
+                <div class="book__page book__page--2"><span class="swatch" style="--s:#5868ff"></span><span class="swatch" style="--s:#8f7cff"></span><span class="swatch" style="--s:#16133f"></span><span class="swatch" style="--s:#f5f4fb"></span></div>
+                <div class="book__cover"><span class="book__mu">µ</span><span class="book__word">Learn</span><span class="book__sub">Brand guidelines</span></div>
+              </div>
+              <div class="type-spec"><span class="type-spec__aa">Aa</span><span class="type-spec__lines"><i></i><i></i><i></i></span></div>
+            </div>
+            <div class="tile__text">
+              <h3>Brand book</h3>
+              <p>Logos, colours and type rules for everything µLearn makes.</p>
+              <span class="tile__go">Open flipbook<svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Gallery -->
+          <a class="glass tile tile--gallery" href="https://mulearn.org/gallery" target="_blank" rel="noopener" data-tilt>
+            <div class="tile__preview polaroids" id="polaroids" aria-hidden="true"></div>
+            <div class="tile__text">
+              <h3>µLearn gallery</h3>
+              <p>Photos from µLearn events across every campus in Kerala.</p>
+              <span class="tile__go">View gallery<svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a class="glass tile tile--insta" href="https://www.instagram.com/mulearn.chn" target="_blank" rel="noopener" data-tilt>
+            <div class="tile__preview insta" aria-hidden="true">
+              <div class="insta__head"><span class="brand__chip brand__chip--sm">µ</span><b>mulearn.chn</b><span class="insta__follow">Follow</span></div>
+              <div class="insta__grid" id="insta-grid"></div>
+            </div>
+            <div class="tile__text">
+              <h3>Instagram</h3>
+              <p>Event posters, recaps and photos from CEC.</p>
+              <span class="tile__go">@mulearn.chn<svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <!-- Announcements -->
+          <a class="glass tile tile--news" href="https://mulearn.org/announcements" target="_blank" rel="noopener" data-tilt>
+            <div class="tile__preview feed" aria-hidden="true">
+              <div class="feed__item"><span class="feed__dot"></span><span class="feed__lines"><i style="--w:82%"></i><i style="--w:56%"></i></span></div>
+              <div class="feed__item"><span class="feed__dot"></span><span class="feed__lines"><i style="--w:70%"></i><i style="--w:44%"></i></span></div>
+              <div class="feed__item"><span class="feed__dot"></span><span class="feed__lines"><i style="--w:88%"></i><i style="--w:60%"></i></span></div>
+            </div>
+            <div class="tile__text">
+              <h3>Announcements</h3>
+              <p>New programmes, challenges and openings from µLearn.</p>
+              <span class="tile__go">Read updates<svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="glass tile tile--linkedin" href="https://www.linkedin.com/company/gtech-mulearn-cec/" target="_blank" rel="noopener" data-tilt>
+            <div class="tile__preview profile" aria-hidden="true">
+              <div class="profile__banner"></div>
+              <div class="profile__row"><span class="profile__logo">µ</span><span class="profile__follow">+ Follow</span></div>
+              <b class="profile__name">GTech µLearn CEC</b>
+              <span class="profile__lines"><i style="--w:75%"></i><i style="--w:50%"></i></span>
+            </div>
+            <div class="tile__text">
+              <h3>LinkedIn</h3>
+              <p>Milestones, achievements and the people behind them.</p>
+              <span class="tile__go">Follow the page<svg class="ico"><use href="#i-arrow"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Join ============ -->
+    <section class="section join-wrap" id="join">
+      <div class="wrap">
+        <div class="join">
+          <div class="join__glow" aria-hidden="true"></div>
+          <div class="core core--sm" aria-hidden="true"><span>µ</span></div>
+          <h2 class="join__title">Join the µverse</h2>
+          <p class="join__lead">Create your µLearn profile, pick an interest group and start earning karma. Then hop into our campus Discord so you never miss an update.</p>
+          <div class="join__actions">
+            <a class="btn btn--primary btn--lg" href="https://app.mulearn.org/register" target="_blank" rel="noopener">Join µLearn</a>
+            <a class="btn btn--glass btn--lg" href="https://discord.gg/DfnDfBhGha" target="_blank" rel="noopener"><svg class="ico"><use href="#i-discord"/></svg>Join our Discord</a>
+          </div>
+          <a class="join__mail" href="mailto:gtechmulearncec@gmail.com"><svg class="ico"><use href="#i-mail"/></svg>gtechmulearncec@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__word" aria-hidden="true">µLearn CHN</div>
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#top" aria-label="µLearn CHN home">
+          <span class="brand__chip">µ</span><span class="brand__word">Learn</span><span class="brand__tag">CHN</span>
+        </a>
+        <p>College of Engineering Chengannur<br />Alappuzha, Kerala 689121</p>
+      </div>
+      <nav class="footer__col" aria-label="µLearn">
+        <h4>µLearn</h4>
+        <a href="https://mulearn.org/" target="_blank" rel="noopener">mulearn.org</a>
+        <a href="https://mulearn.org/announcements" target="_blank" rel="noopener">Announcements</a>
+        <a href="https://mulearn.org/gallery" target="_blank" rel="noopener">Gallery</a>
+        <a href="https://online.fliphtml5.com/egsqr/tlgc/" target="_blank" rel="noopener">Branding</a>
+      </nav>
+      <nav class="footer__col" aria-label="Social">
+        <h4>Follow us</h4>
+        <a href="https://www.instagram.com/mulearn.chn" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/company/gtech-mulearn-cec/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://discord.gg/DfnDfBhGha" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </div>
+    <div class="wrap footer__base">
+      <p>© <span id="year">2026</span> µLearn Foundation. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Image viewer -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <button class="round-btn lightbox__close" id="lightbox-close" aria-label="Close"><svg class="ico"><use href="#i-close"/></svg></button>
+    <figure>
+      <img id="lightbox-img" alt="" />
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
